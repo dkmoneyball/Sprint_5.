@@ -45,3 +45,16 @@ class StellarburgersLocators:
     # Кнопка Выход
     EXIT_BUTTON = (By.XPATH, "//button[text()='Выход']")
 
+    # Ввод имеила для входа
+    EMAIL_BUTTON = (By.XPATH, "//input[@name = 'name' ]")
+
+    # Ввод пароля для входа
+    PASSWORD_BUTTON = (By.XPATH, "//input[@type= 'password' and @name='Пароль']")
+
+    # Кнопка входа в личный кабинет
+    LOGIN_BUTTON = (By.XPATH, "//button[text()='Войти']")
+
+
+
+
+
