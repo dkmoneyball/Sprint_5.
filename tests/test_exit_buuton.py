@@ -10,11 +10,10 @@ class TestStellarburgersLogin:
 
         driver.find_element(*StellarburgersLocators.LOGIN_BUTTON_MAIN).click()
 
-        driver.find_element(*StellarburgersLocators.EMAIL_BUTTON) . send_keys("kutepov@gmail.com")
+        driver.find_element(*StellarburgersLocators.EMAIL_BUTTON).send_keys("kutepov@gmail.com")
         driver.find_element(*StellarburgersLocators.PASSWORD_BUTTON).send_keys("123456")
 
         driver.find_element(*StellarburgersLocators.LOGIN_BUTTON).click()
-
 
         driver.find_element(*StellarburgersLocators.PERSONAL_ACCOUNT_BUTTON).click()
 

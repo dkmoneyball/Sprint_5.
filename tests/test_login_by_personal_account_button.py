@@ -6,8 +6,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 class TestStellarburgersLoginByPersonalAccountButton:
 
-    def test_test_login_by_personal_account_button(self, driver):
-
+    def test_login_by_personal_account_button(self, driver):
         driver.find_element(*StellarburgersLocators.PERSONAL_ACCOUNT_BUTTON).click()
 
         driver.find_element(*StellarburgersLocators.EMAIL_BUTTON).send_keys("kutepov@gmail.com")
@@ -15,8 +14,7 @@ class TestStellarburgersLoginByPersonalAccountButton:
 
         driver.find_element(*StellarburgersLocators.LOGIN_BUTTON).click()
 
-        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((StellarburgersLocators.GET_ORDER_BUTTON)))
-
-
+        WebDriverWait(driver, 3).until(
+            expected_conditions.visibility_of_element_located((StellarburgersLocators.GET_ORDER_BUTTON)))
 
         assert driver.find_element(*StellarburgersLocators.GET_ORDER_BUTTON).is_displayed(), "Order button does not exist"

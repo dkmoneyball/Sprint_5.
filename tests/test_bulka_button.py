@@ -6,20 +6,17 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 class TestStellarburgersLogin:
 
-    def test_login(self, driver):
-
-
-
+    def test_bulka_button(self, driver):
         driver.find_element(*StellarburgersLocators.SAUCES_BUTTON).click()
 
         WebDriverWait(driver, 3).until(
-            expected_conditions.visibility_of_element_located((StellarburgersLocators.BULKI_BUTTON)))
+            expected_conditions.visibility_of_element_located(
+                (StellarburgersLocators.BULKI_BUTTON)))
 
         driver.find_element(*StellarburgersLocators.BULKI_BUTTON).click()
         WebDriverWait(driver, 3).until(
-            expected_conditions.visibility_of_element_located((StellarburgersLocators.KRATORNAY_BULKA_BUTTON)))
+            expected_conditions.visibility_of_element_located(
+                (StellarburgersLocators.BULKI_BUTTON_ON_FOCUS)))
 
-
-
-
-        assert driver.find_element(*StellarburgersLocators.KRATORNAY_BULKA_BUTTON).is_displayed()
+        assert driver.find_element(
+            *StellarburgersLocators.BULKI_BUTTON_ON_FOCUS).is_displayed()

@@ -54,7 +54,12 @@ class StellarburgersLocators:
     # Кнопка входа в личный кабинет
     LOGIN_BUTTON = (By.XPATH, "//button[text()='Войти']")
 
+    # Кнопка булка в фокусе
+    BULKI_BUTTON_ON_FOCUS = (By.XPATH, "//div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[@class='text text_type_main-default' and text()='Булки']")
 
+    # Кнопка соусы в фокусе
+    SAUCES_BUTTON_ON_FOCUS = (By.XPATH, "//div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[@class='text text_type_main-default' and text()='Соусы']")
 
+    FILLING_BUTTON_ON_FOCUS = (By.XPATH, "//div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[@class='text text_type_main-default' and text()='Начинки']")
 
 

@@ -1,10 +1,10 @@
 from selenium.webdriver.common.by import By
-
 import settings
 from locators import StellarburgersLocators
 import random
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
+
 
 class TestStellarburgersRegistration:
 
@@ -17,6 +17,6 @@ class TestStellarburgersRegistration:
         driver.find_element(*StellarburgersLocators.REGISTRATION_PASSWORD).send_keys("123456")
 
         driver.find_element(*StellarburgersLocators.REGISTRATION_BUTTON).click()
-        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((StellarburgersLocators.LOGIN_TITEL_MAIN)))
+        WebDriverWait(driver, 3).until(
+            expected_conditions.visibility_of_element_located((StellarburgersLocators.LOGIN_TITEL_MAIN)))
         assert driver.find_element(*StellarburgersLocators.LOGIN_TITEL_MAIN).text == "Вход"
-

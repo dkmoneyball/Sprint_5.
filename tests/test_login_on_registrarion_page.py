@@ -1,13 +1,13 @@
-
 from selenium.webdriver.common.by import By
 import settings
 from locators import StellarburgersLocators
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
+
 class TestStellarburgersLoginOnRegistrarionPage:
 
-    def test_registration(self, driver):
+    def test_login_on_registration_page(self, driver):
         driver.get(settings.URL + "register")
 
         driver.find_element(*StellarburgersLocators.LOGIN_BUTTON_ON_REGISTRATION_PAGE).click()
@@ -16,7 +16,7 @@ class TestStellarburgersLoginOnRegistrarionPage:
 
         driver.find_element(*StellarburgersLocators.LOGIN_BUTTON).click()
 
-        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((StellarburgersLocators.GET_ORDER_BUTTON)))
-
+        WebDriverWait(driver, 3).until(
+            expected_conditions.visibility_of_element_located((StellarburgersLocators.GET_ORDER_BUTTON)))
 
         assert driver.find_element(*StellarburgersLocators.GET_ORDER_BUTTON).is_displayed(), "Order button does not exist"
